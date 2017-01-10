@@ -4,6 +4,7 @@
   "description": "\"simple & liteweight hybrid mobile app\"",
   "scripts": {
     "dev": "tsc && concurrently \"tsc -w\" \"lite-server -c configs/bs-config.js\"",
+    "tsc": "tsc",
     "lite": "lite-server -c configs/bs-config.js",
     "ngc": "ngc -p tsconfig-aot.json",
     "rollup": "rollup -c configs/rollup.config.js",

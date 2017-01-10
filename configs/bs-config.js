@@ -7,7 +7,11 @@ var compression = require('compression');
 
 module.exports = {
     "port": 3000,
-    "files": ["./app/**/*.{html,htm,css,js}"],
+    "files": [
+        "./src/*.{html,htm,css,js,ts}",
+        "./src/**/*.{html,htm,css,js,ts}",
+        "*.html"
+    ],
     server: {
         middleware: {
             // overrides the second middleware default with new settings
@@ -16,10 +20,10 @@ module.exports = {
             /**
              * Only for develop environment.
              */
-            // 2: require('connect-history-api-fallback')({
-            //     index: './index.dev.html',
-            //     verbose: true
-            // })
+            2: require('connect-history-api-fallback')({
+                index: './index.dev.html',
+                verbose: true
+            })
         }
     }
 };
