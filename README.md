@@ -1,8 +1,6 @@
 # Angular2-native ( Typescript )
 
-[ View ] : (https://gman.io/youtube)
-
-It is a good guidance for using Youtube API with angular2 Native Script. <br>
+It is a good guidance with angular2 Native Script. <br>
 
 > Dev Environment : SystemJS <br>
 > Build Environment : Angular Ahead Of Time Compilation + rollUp + uglifyJS
@@ -15,7 +13,7 @@ powered by Angular2 ( rollUp, systemJS, AOT process )
 
 The MIT License
 
-Copyright (c) 2016 Gman Park
+Copyright (c) 2017 Gman Park
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
