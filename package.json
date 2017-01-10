@@ -1,0 +1,43 @@
+{
+  "name": "angular2-native",
+  "version": "0.0.1",
+  "description": "\"simple & liteweight hybrid mobile app\"",
+  "scripts": {
+    "dev": "tsc && concurrently \"tsc -w\" \"lite-server -c configs/bs-config.js\"",
+    "lite": "lite-server -c configs/bs-config.js",
+    "ngc": "ngc -p tsconfig-aot.json",
+    "rollup": "rollup -c configs/rollup.config.js",
+    "es5": "tsc --target es5 --allowJs dist/bundle.es2015.js --out dist/bundle.js",
+    "minify": "uglifyjs dist/bundle.js --screw-ie8 --compress --mangle --output dist/bundle.min.js",
+    "build": "npm run rollup && npm run es5 && npm run minify"
+  },
+  "author": "GmanPark@2017",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "^2.4.2",
+    "@angular/compiler": "^2.4.2",
+    "@angular/compiler-cli": "^2.4.2",
+    "@angular/core": "^2.4.2",
+    "@angular/http": "^2.4.2",
+    "@angular/platform-browser": "^2.4.2",
+    "@angular/platform-browser-dynamic": "^2.4.2",
+    "@angular/router": "^3.4.2",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.0.3",
+    "typescript": "^2.1.4",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.59",
+    "compression": "^1.6.2",
+    "concurrently": "^3.1.0",
+    "core-js": "^2.4.1",
+    "lite-server": "^2.2.2",
+    "reflect-metadata": "^0.1.9",
+    "rollup": "^0.41.1",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "systemjs": "^0.19.41",
+    "uglifyjs": "^2.4.10"
+  }
+}

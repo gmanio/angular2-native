@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gman's App</title>
+    <meta name="google" value="notranslate">
+    <meta name="theme-color" content="#db5945">
+    <meta name="description" content="angular2, NativeScript">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- Firefox, Chrome, Safari, IE 11+ and Opera. 196x196 pixels in size. -->
+    <link rel="icon" sizes="192x192" href="assets/favicon.png">
+    <base href="/">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Systemjs Dev -->
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="configs/systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function(err) { console.error(err); });
+    </script>
+</head>
+<body>
+    <app>
+        <!-- Here is application area -->
+    </app>
+</body>
+</html>
