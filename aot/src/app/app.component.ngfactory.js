@@ -17,15 +17,16 @@ var import4 = require("@angular/core/src/metadata/view");
 var import5 = require("@angular/core/src/linker/view_type");
 var import6 = require("@angular/core/src/change_detection/constants");
 var import7 = require("@angular/core/src/linker/component_factory");
-var import8 = require("@angular/core/src/linker/view_container");
-var import9 = require("../../node_modules/@angular/router/src/directives/router_outlet.ngfactory");
-var import10 = require("@angular/router/src/router_outlet_map");
-var import11 = require("@angular/core/src/linker/component_factory_resolver");
-var import12 = require("@angular/router/src/directives/router_outlet");
+var import8 = require("@angular/router/src/router");
+var import9 = require("@angular/core/src/linker/view_container");
+var import10 = require("../../node_modules/@angular/router/src/directives/router_outlet.ngfactory");
+var import11 = require("@angular/router/src/router_outlet_map");
+var import12 = require("@angular/core/src/linker/component_factory_resolver");
+var import13 = require("@angular/router/src/directives/router_outlet");
 var Wrapper_AppComponent = (function () {
-    function Wrapper_AppComponent() {
+    function Wrapper_AppComponent(p0) {
         this._changed = false;
-        this.context = new import0.AppComponent();
+        this.context = new import0.AppComponent(p0);
     }
     Wrapper_AppComponent.prototype.ngOnDetach = function (view, componentView, el) {
     };
@@ -40,6 +41,10 @@ var Wrapper_AppComponent = (function () {
     };
     Wrapper_AppComponent.prototype.handleEvent = function (eventName, $event) {
         var result = true;
+        if ((eventName == 'document:click')) {
+            var pd_sub_0 = (this.context.onClick($event) !== false);
+            result = (pd_sub_0 && result);
+        }
         return result;
     };
     Wrapper_AppComponent.prototype.subscribe = function (view, _eventHandler) {
@@ -57,9 +62,10 @@ var View_AppComponent_Host0 = (function (_super) {
     View_AppComponent_Host0.prototype.createInternal = function (rootSelector) {
         this._el_0 = import3.selectOrCreateRenderHostElement(this.renderer, 'app', import3.EMPTY_INLINE_ARRAY, rootSelector, null);
         this.compView_0 = new View_AppComponent0(this.viewUtils, this, 0, this._el_0);
-        this._AppComponent_0_3 = new Wrapper_AppComponent();
+        this._AppComponent_0_3 = new Wrapper_AppComponent(this.injectorGet(import8.Router, this.parentIndex));
         this.compView_0.create(this._AppComponent_0_3.context);
-        this.init(this._el_0, (this.renderer.directRenderer ? null : [this._el_0]), null);
+        var disposable_0 = import3.subscribeToRenderElement(this, this._el_0, new import3.InlineArray2(2, 'click', 'document'), this.eventHandler(this.handleEvent_0));
+        this.init(this._el_0, (this.renderer.directRenderer ? null : [this._el_0]), [disposable_0]);
         return new import7.ComponentRef_(0, this, this._el_0, this._AppComponent_0_3.context);
     };
     View_AppComponent_Host0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
@@ -78,6 +84,12 @@ var View_AppComponent_Host0 = (function (_super) {
     View_AppComponent_Host0.prototype.visitRootNodesInternal = function (cb, ctx) {
         cb(this._el_0, ctx);
     };
+    View_AppComponent_Host0.prototype.handleEvent_0 = function (eventName, $event) {
+        this.compView_0.markPathToRootAsCheckOnce();
+        var result = true;
+        result = (this._AppComponent_0_3.handleEvent(eventName, $event) && result);
+        return result;
+    };
     return View_AppComponent_Host0;
 }(import1.AppView));
 exports.AppComponentNgFactory = new import7.ComponentFactory('app', View_AppComponent_Host0, import0.AppComponent);
@@ -91,13 +103,13 @@ var View_AppComponent0 = (function (_super) {
     View_AppComponent0.prototype.createInternal = function (rootSelector) {
         var parentRenderNode = this.renderer.createViewRoot(this.parentElement);
         this._el_0 = import3.createRenderElement(this.renderer, parentRenderNode, 'router-outlet', import3.EMPTY_INLINE_ARRAY, null);
-        this._vc_0 = new import8.ViewContainer(0, null, this, this._el_0);
-        this._RouterOutlet_0_5 = new import9.Wrapper_RouterOutlet(this.parentView.injectorGet(import10.RouterOutletMap, this.parentIndex), this._vc_0.vcRef, this.parentView.injectorGet(import11.ComponentFactoryResolver, this.parentIndex), null);
+        this._vc_0 = new import9.ViewContainer(0, null, this, this._el_0);
+        this._RouterOutlet_0_5 = new import10.Wrapper_RouterOutlet(this.parentView.injectorGet(import11.RouterOutletMap, this.parentIndex), this._vc_0.vcRef, this.parentView.injectorGet(import12.ComponentFactoryResolver, this.parentIndex), null);
         this.init(null, (this.renderer.directRenderer ? null : [this._el_0]), null);
         return null;
     };
     View_AppComponent0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
-        if (((token === import12.RouterOutlet) && (0 === requestNodeIndex))) {
+        if (((token === import13.RouterOutlet) && (0 === requestNodeIndex))) {
             return this._RouterOutlet_0_5.context;
         }
         return notFoundResult;
@@ -113,4 +125,3 @@ var View_AppComponent0 = (function (_super) {
     return View_AppComponent0;
 }(import1.AppView));
 exports.View_AppComponent0 = View_AppComponent0;
-//# sourceMappingURL=app.component.ngfactory.js.map

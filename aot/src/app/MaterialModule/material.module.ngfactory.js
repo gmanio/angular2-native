@@ -10,21 +10,21 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 import * as import0 from '@angular/core/src/linker/ng_module_factory';
-import * as import1 from '../../../../src/app/childModule/child.module';
+import * as import1 from '../../../../src/app/MaterialModule/material.module';
 import * as import2 from '@angular/common/src/common_module';
 import * as import3 from '@angular/router/src/router_module';
 import * as import4 from '@angular/common/src/localization';
 import * as import5 from '@angular/platform-browser/src/browser/title';
-import * as import7 from './child.component.ngfactory';
+import * as import7 from './material.component.ngfactory';
 import * as import8 from '@angular/core/src/i18n/tokens';
-import * as import9 from '../../../../src/app/childModule/child.component';
+import * as import9 from '../../../../src/app/MaterialModule/material.component';
 import * as import10 from '@angular/router/src/router_config_loader';
-var ChildModuleInjector = (function (_super) {
-    __extends(ChildModuleInjector, _super);
-    function ChildModuleInjector(parent) {
-        return _super.call(this, parent, [import7.ChildComponentNgFactory], []) || this;
+var MaterialComponentModuleInjector = (function (_super) {
+    __extends(MaterialComponentModuleInjector, _super);
+    function MaterialComponentModuleInjector(parent) {
+        return _super.call(this, parent, [import7.MaterialComponentNgFactory], []) || this;
     }
-    Object.defineProperty(ChildModuleInjector.prototype, "_NgLocalization_3", {
+    Object.defineProperty(MaterialComponentModuleInjector.prototype, "_NgLocalization_3", {
         get: function () {
             if ((this.__NgLocalization_3 == null)) {
                 (this.__NgLocalization_3 = new import4.NgLocaleLocalization(this.parent.get(import8.LOCALE_ID)));
@@ -34,12 +34,12 @@ var ChildModuleInjector = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(ChildModuleInjector.prototype, "_ROUTES_4", {
+    Object.defineProperty(MaterialComponentModuleInjector.prototype, "_ROUTES_4", {
         get: function () {
             if ((this.__ROUTES_4 == null)) {
                 (this.__ROUTES_4 = [[{
-                            path: 'child',
-                            component: import9.ChildComponent,
+                            path: 'material',
+                            component: import9.MaterialComponent,
                             data: { title: 'ChildComponent' }
                         }
                     ]]);
@@ -49,7 +49,7 @@ var ChildModuleInjector = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(ChildModuleInjector.prototype, "_Title_5", {
+    Object.defineProperty(MaterialComponentModuleInjector.prototype, "_Title_5", {
         get: function () {
             if ((this.__Title_5 == null)) {
                 (this.__Title_5 = new import5.Title());
@@ -59,21 +59,21 @@ var ChildModuleInjector = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    ChildModuleInjector.prototype.createInternal = function () {
+    MaterialComponentModuleInjector.prototype.createInternal = function () {
         this._CommonModule_0 = new import2.CommonModule();
         this._RouterModule_1 = new import3.RouterModule(this.parent.get(import3.ROUTER_FORROOT_GUARD, null));
-        this._ChildModule_2 = new import1.ChildModule();
-        return this._ChildModule_2;
+        this._MaterialComponentModule_2 = new import1.MaterialComponentModule();
+        return this._MaterialComponentModule_2;
     };
-    ChildModuleInjector.prototype.getInternal = function (token, notFoundResult) {
+    MaterialComponentModuleInjector.prototype.getInternal = function (token, notFoundResult) {
         if ((token === import2.CommonModule)) {
             return this._CommonModule_0;
         }
         if ((token === import3.RouterModule)) {
             return this._RouterModule_1;
         }
-        if ((token === import1.ChildModule)) {
-            return this._ChildModule_2;
+        if ((token === import1.MaterialComponentModule)) {
+            return this._MaterialComponentModule_2;
         }
         if ((token === import4.NgLocalization)) {
             return this._NgLocalization_3;
@@ -86,9 +86,9 @@ var ChildModuleInjector = (function (_super) {
         }
         return notFoundResult;
     };
-    ChildModuleInjector.prototype.destroyInternal = function () {
+    MaterialComponentModuleInjector.prototype.destroyInternal = function () {
     };
-    return ChildModuleInjector;
+    return MaterialComponentModuleInjector;
 }(import0.NgModuleInjector));
-export var ChildModuleNgFactory = new import0.NgModuleFactory(ChildModuleInjector, import1.ChildModule);
-//# sourceMappingURL=child.module.ngfactory.js.map
+export var MaterialComponentModuleNgFactory = new import0.NgModuleFactory(MaterialComponentModuleInjector, import1.MaterialComponentModule);
+//# sourceMappingURL=material.module.ngfactory.js.map

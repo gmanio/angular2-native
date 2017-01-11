@@ -125,4 +125,3 @@ var View_ChildComponent0 = (function (_super) {
     return View_ChildComponent0;
 }(import1.AppView));
 exports.View_ChildComponent0 = View_ChildComponent0;
-//# sourceMappingURL=child.component.ngfactory.js.map

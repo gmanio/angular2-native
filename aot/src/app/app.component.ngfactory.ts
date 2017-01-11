@@ -13,18 +13,19 @@ import * as import4 from '@angular/core/src/metadata/view';
 import * as import5 from '@angular/core/src/linker/view_type';
 import * as import6 from '@angular/core/src/change_detection/constants';
 import * as import7 from '@angular/core/src/linker/component_factory';
-import * as import8 from '@angular/core/src/linker/view_container';
-import * as import9 from '../../node_modules/@angular/router/src/directives/router_outlet.ngfactory';
-import * as import10 from '@angular/router/src/router_outlet_map';
-import * as import11 from '@angular/core/src/linker/component_factory_resolver';
-import * as import12 from '@angular/router/src/directives/router_outlet';
+import * as import8 from '@angular/router/src/router';
+import * as import9 from '@angular/core/src/linker/view_container';
+import * as import10 from '../../node_modules/@angular/router/src/directives/router_outlet.ngfactory';
+import * as import11 from '@angular/router/src/router_outlet_map';
+import * as import12 from '@angular/core/src/linker/component_factory_resolver';
+import * as import13 from '@angular/router/src/directives/router_outlet';
 export class Wrapper_AppComponent {
   /*private*/ _eventHandler:Function;
   context:import0.AppComponent;
   /*private*/ _changed:boolean;
-  constructor() {
+  constructor(p0:any) {
     this._changed = false;
-    this.context = new import0.AppComponent();
+    this.context = new import0.AppComponent(p0);
   }
   ngOnDetach(view:import1.AppView<any>,componentView:import1.AppView<any>,el:any):void {
   }
@@ -39,6 +40,10 @@ export class Wrapper_AppComponent {
   }
   handleEvent(eventName:string,$event:any):boolean {
     var result:boolean = true;
+    if ((eventName == 'document:click')) {
+      const pd_sub_0:any = ((<any>this.context.onClick($event)) !== false);
+      result = (pd_sub_0 && result);
+    }
     return result;
   }
   subscribe(view:import1.AppView<any>,_eventHandler:any):void {
@@ -56,9 +61,10 @@ class View_AppComponent_Host0 extends import1.AppView<any> {
   createInternal(rootSelector:string):import7.ComponentRef<any> {
     this._el_0 = import3.selectOrCreateRenderHostElement(this.renderer,'app',import3.EMPTY_INLINE_ARRAY,rootSelector,(null as any));
     this.compView_0 = new View_AppComponent0(this.viewUtils,this,0,this._el_0);
-    this._AppComponent_0_3 = new Wrapper_AppComponent();
+    this._AppComponent_0_3 = new Wrapper_AppComponent(this.injectorGet(import8.Router,this.parentIndex));
     this.compView_0.create(this._AppComponent_0_3.context);
-    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [this._el_0]),(null as any));
+    var disposable_0:Function = import3.subscribeToRenderElement(this,this._el_0,new import3.InlineArray2(2,'click','document'),this.eventHandler(this.handleEvent_0));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [this._el_0]),[disposable_0]);
     return new import7.ComponentRef_<any>(0,this,this._el_0,this._AppComponent_0_3.context);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
@@ -75,27 +81,33 @@ class View_AppComponent_Host0 extends import1.AppView<any> {
   visitRootNodesInternal(cb:any,ctx:any):void {
     cb(this._el_0,ctx);
   }
+  handleEvent_0(eventName:string,$event:any):boolean {
+    this.compView_0.markPathToRootAsCheckOnce();
+    var result:boolean = true;
+    result = (this._AppComponent_0_3.handleEvent(eventName,$event) && result);
+    return result;
+  }
 }
 export const AppComponentNgFactory:import7.ComponentFactory<import0.AppComponent> = new import7.ComponentFactory<import0.AppComponent>('app',View_AppComponent_Host0,import0.AppComponent);
 const styles_AppComponent:any[] = ([] as any[]);
 var renderType_AppComponent:import2.RenderComponentType = import3.createRenderComponentType('',0,import4.ViewEncapsulation.None,styles_AppComponent,{});
 export class View_AppComponent0 extends import1.AppView<import0.AppComponent> {
   _el_0:any;
-  /*private*/ _vc_0:import8.ViewContainer;
-  _RouterOutlet_0_5:import9.Wrapper_RouterOutlet;
+  /*private*/ _vc_0:import9.ViewContainer;
+  _RouterOutlet_0_5:import10.Wrapper_RouterOutlet;
   constructor(viewUtils:import3.ViewUtils,parentView:import1.AppView<any>,parentIndex:number,parentElement:any) {
     super(View_AppComponent0,renderType_AppComponent,import5.ViewType.COMPONENT,viewUtils,parentView,parentIndex,parentElement,import6.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import7.ComponentRef<any> {
     const parentRenderNode:any = this.renderer.createViewRoot(this.parentElement);
     this._el_0 = import3.createRenderElement(this.renderer,parentRenderNode,'router-outlet',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._vc_0 = new import8.ViewContainer(0,(null as any),this,this._el_0);
-    this._RouterOutlet_0_5 = new import9.Wrapper_RouterOutlet(this.parentView.injectorGet(import10.RouterOutletMap,this.parentIndex),this._vc_0.vcRef,this.parentView.injectorGet(import11.ComponentFactoryResolver,this.parentIndex),(null as any));
+    this._vc_0 = new import9.ViewContainer(0,(null as any),this,this._el_0);
+    this._RouterOutlet_0_5 = new import10.Wrapper_RouterOutlet(this.parentView.injectorGet(import11.RouterOutletMap,this.parentIndex),this._vc_0.vcRef,this.parentView.injectorGet(import12.ComponentFactoryResolver,this.parentIndex),(null as any));
     this.init((null as any),((<any>this.renderer).directRenderer? (null as any): [this._el_0]),(null as any));
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import12.RouterOutlet) && (0 === requestNodeIndex))) { return this._RouterOutlet_0_5.context; }
+    if (((token === import13.RouterOutlet) && (0 === requestNodeIndex))) { return this._RouterOutlet_0_5.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {

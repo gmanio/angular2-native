@@ -13,6 +13,8 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
+    "strictNullChecks": false,
+    "declaration": false,
     "lib": [
       "es2015",
       "dom"
@@ -21,12 +23,17 @@
       "../node_modules/@types"
     ],
     "types" : [
-      "node"
+      "node",
+      "hammerjs"
     ]
   },
+  "include":[
+    "src/app/**/*"
+  ],
   "exclude": [
     "node_modules",
     "**/*.spec.ts",
-    "/aot"
+    "/aot",
+    "src/main-aot.ts"
   ]
 }
