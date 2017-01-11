@@ -10,18 +10,18 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var import0 = require('../../../src/app/app.component');
-var import1 = require('@angular/core/src/linker/view');
-var import3 = require('@angular/core/src/linker/view_utils');
-var import4 = require('@angular/core/src/metadata/view');
-var import5 = require('@angular/core/src/linker/view_type');
-var import6 = require('@angular/core/src/change_detection/constants');
-var import7 = require('@angular/core/src/linker/component_factory');
-var import8 = require('@angular/core/src/linker/view_container');
-var import9 = require('../../node_modules/@angular/router/src/directives/router_outlet.ngfactory');
-var import10 = require('@angular/router/src/router_outlet_map');
-var import11 = require('@angular/core/src/linker/component_factory_resolver');
-var import12 = require('@angular/router/src/directives/router_outlet');
+var import0 = require("../../../src/app/app.component");
+var import1 = require("@angular/core/src/linker/view");
+var import3 = require("@angular/core/src/linker/view_utils");
+var import4 = require("@angular/core/src/metadata/view");
+var import5 = require("@angular/core/src/linker/view_type");
+var import6 = require("@angular/core/src/change_detection/constants");
+var import7 = require("@angular/core/src/linker/component_factory");
+var import8 = require("@angular/core/src/linker/view_container");
+var import9 = require("../../node_modules/@angular/router/src/directives/router_outlet.ngfactory");
+var import10 = require("@angular/router/src/router_outlet_map");
+var import11 = require("@angular/core/src/linker/component_factory_resolver");
+var import12 = require("@angular/router/src/directives/router_outlet");
 var Wrapper_AppComponent = (function () {
     function Wrapper_AppComponent() {
         this._changed = false;
@@ -52,7 +52,7 @@ var renderType_AppComponent_Host = import3.createRenderComponentType('', 0, impo
 var View_AppComponent_Host0 = (function (_super) {
     __extends(View_AppComponent_Host0, _super);
     function View_AppComponent_Host0(viewUtils, parentView, parentIndex, parentElement) {
-        _super.call(this, View_AppComponent_Host0, renderType_AppComponent_Host, import5.ViewType.HOST, viewUtils, parentView, parentIndex, parentElement, import6.ChangeDetectorStatus.CheckAlways);
+        return _super.call(this, View_AppComponent_Host0, renderType_AppComponent_Host, import5.ViewType.HOST, viewUtils, parentView, parentIndex, parentElement, import6.ChangeDetectorStatus.CheckAlways) || this;
     }
     View_AppComponent_Host0.prototype.createInternal = function (rootSelector) {
         this._el_0 = import3.selectOrCreateRenderHostElement(this.renderer, 'app', import3.EMPTY_INLINE_ARRAY, rootSelector, null);
@@ -86,7 +86,7 @@ var renderType_AppComponent = import3.createRenderComponentType('', 0, import4.V
 var View_AppComponent0 = (function (_super) {
     __extends(View_AppComponent0, _super);
     function View_AppComponent0(viewUtils, parentView, parentIndex, parentElement) {
-        _super.call(this, View_AppComponent0, renderType_AppComponent, import5.ViewType.COMPONENT, viewUtils, parentView, parentIndex, parentElement, import6.ChangeDetectorStatus.CheckAlways);
+        return _super.call(this, View_AppComponent0, renderType_AppComponent, import5.ViewType.COMPONENT, viewUtils, parentView, parentIndex, parentElement, import6.ChangeDetectorStatus.CheckAlways) || this;
     }
     View_AppComponent0.prototype.createInternal = function (rootSelector) {
         var parentRenderNode = this.renderer.createViewRoot(this.parentElement);

@@ -10,20 +10,20 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var import0 = require('@angular/core/src/linker/ng_module_factory');
-var import1 = require('../../../../src/app/childModule/child.module');
-var import2 = require('@angular/common/src/common_module');
-var import3 = require('@angular/router/src/router_module');
-var import4 = require('@angular/common/src/localization');
-var import5 = require('@angular/platform-browser/src/browser/title');
-var import7 = require('./child.component.ngfactory');
-var import8 = require('@angular/core/src/i18n/tokens');
-var import9 = require('../../../../src/app/childModule/child.component');
-var import10 = require('@angular/router/src/router_config_loader');
+var import0 = require("@angular/core/src/linker/ng_module_factory");
+var import1 = require("../../../../src/app/childModule/child.module");
+var import2 = require("@angular/common/src/common_module");
+var import3 = require("@angular/router/src/router_module");
+var import4 = require("@angular/common/src/localization");
+var import5 = require("@angular/platform-browser/src/browser/title");
+var import7 = require("./child.component.ngfactory");
+var import8 = require("@angular/core/src/i18n/tokens");
+var import9 = require("../../../../src/app/childModule/child.component");
+var import10 = require("@angular/router/src/router_config_loader");
 var ChildModuleInjector = (function (_super) {
     __extends(ChildModuleInjector, _super);
     function ChildModuleInjector(parent) {
-        _super.call(this, parent, [import7.ChildComponentNgFactory], []);
+        return _super.call(this, parent, [import7.ChildComponentNgFactory], []) || this;
     }
     Object.defineProperty(ChildModuleInjector.prototype, "_NgLocalization_3", {
         get: function () {

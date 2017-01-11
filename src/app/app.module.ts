@@ -14,13 +14,15 @@ import {routingModule} from './app.routes';
 import {AppComponent} from './app.component';
 import {PageNotFoundComponent} from "./error/pagenotfound.component";
 import {ChildModule} from "./childModule/child.module";
+import {ChildModule2} from "./childModule2/child.module";
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
         routingModule,
-        ChildModule
+        ChildModule,
+        ChildModule2
     ],
     declarations: [
         AppComponent,

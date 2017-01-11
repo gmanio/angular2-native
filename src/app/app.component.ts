@@ -3,7 +3,8 @@
  * @author: Gman Park
  */
 
-import {Component} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
     moduleId: module.id,
@@ -12,5 +13,18 @@ import {Component} from '@angular/core';
 })
 
 export class AppComponent {
-    constructor() {}
+    constructor(private router: Router) {
+        this.router = router;
+    }
+
+    @HostListener('document:click', ['$event'])
+    onClick(ev: KeyboardEvent) {
+        if(this.router.url === '/child'){
+            this.router.navigate(['/child2']);
+        }
+
+        if(this.router.url === '/child2'){
+            this.router.navigate(['/child']);
+        }
+    }
 }
