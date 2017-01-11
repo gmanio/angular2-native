@@ -9,10 +9,12 @@ import {RouterModule} from "@angular/router";
 import {AppComponent} from './app.component';
 import {PageNotFoundComponent} from "./error/pagenotfound.component";
 
+import {ChildModule} from "./childModule/child.module";
+
 export const routingModule = RouterModule.forRoot([
-    // {path: '', redirectTo: 'home', pathMatch: 'full'},
+    {path: '', redirectTo: 'child', pathMatch: 'full'},
     {
-        path: '', component: AppComponent
+        path: 'child', component: ChildModule, data: {title: 'Heroes List'}
     },
     {
         path: "**",

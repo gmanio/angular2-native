@@ -13,16 +13,18 @@ import {routingModule} from './app.routes';
 // User Module
 import {AppComponent} from './app.component';
 import {PageNotFoundComponent} from "./error/pagenotfound.component";
+import {ChildModule} from "./childModule/child.module";
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
-        routingModule
+        routingModule,
+        ChildModule
     ],
     declarations: [
         AppComponent,
-        PageNotFoundComponent
+        PageNotFoundComponent,
     ],
     providers: [
         Title
