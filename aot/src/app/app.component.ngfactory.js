@@ -17,6 +17,11 @@ var import4 = require('@angular/core/src/metadata/view');
 var import5 = require('@angular/core/src/linker/view_type');
 var import6 = require('@angular/core/src/change_detection/constants');
 var import7 = require('@angular/core/src/linker/component_factory');
+var import8 = require('@angular/core/src/linker/view_container');
+var import9 = require('../../node_modules/@angular/router/src/directives/router_outlet.ngfactory');
+var import10 = require('@angular/router/src/router_outlet_map');
+var import11 = require('@angular/core/src/linker/component_factory_resolver');
+var import12 = require('@angular/router/src/directives/router_outlet');
 var Wrapper_AppComponent = (function () {
     function Wrapper_AppComponent() {
         this._changed = false;
@@ -85,13 +90,25 @@ var View_AppComponent0 = (function (_super) {
     }
     View_AppComponent0.prototype.createInternal = function (rootSelector) {
         var parentRenderNode = this.renderer.createViewRoot(this.parentElement);
-        this._el_0 = import3.createRenderElement(this.renderer, parentRenderNode, 'h2', import3.EMPTY_INLINE_ARRAY, null);
-        this._text_1 = this.renderer.createText(this._el_0, 'It\'s works', null);
-        this.init(null, (this.renderer.directRenderer ? null : [
-            this._el_0,
-            this._text_1
-        ]), null);
+        this._el_0 = import3.createRenderElement(this.renderer, parentRenderNode, 'router-outlet', import3.EMPTY_INLINE_ARRAY, null);
+        this._vc_0 = new import8.ViewContainer(0, null, this, this._el_0);
+        this._RouterOutlet_0_5 = new import9.Wrapper_RouterOutlet(this.parentView.injectorGet(import10.RouterOutletMap, this.parentIndex), this._vc_0.vcRef, this.parentView.injectorGet(import11.ComponentFactoryResolver, this.parentIndex), null);
+        this.init(null, (this.renderer.directRenderer ? null : [this._el_0]), null);
         return null;
+    };
+    View_AppComponent0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
+        if (((token === import12.RouterOutlet) && (0 === requestNodeIndex))) {
+            return this._RouterOutlet_0_5.context;
+        }
+        return notFoundResult;
+    };
+    View_AppComponent0.prototype.detectChangesInternal = function (throwOnChange) {
+        this._RouterOutlet_0_5.ngDoCheck(this, this._el_0, throwOnChange);
+        this._vc_0.detectChangesInNestedViews(throwOnChange);
+    };
+    View_AppComponent0.prototype.destroyInternal = function () {
+        this._vc_0.destroyNestedViews();
+        this._RouterOutlet_0_5.ngOnDestroy();
     };
     return View_AppComponent0;
 }(import1.AppView));

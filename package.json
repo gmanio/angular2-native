@@ -10,7 +10,7 @@
     "rollup": "rollup -c configs/rollup.config.js",
     "es5": "tsc --target es5 --allowJs dist/bundle.es2015.js --out dist/bundle.js",
     "minify": "uglifyjs dist/bundle.js --screw-ie8 --compress --mangle --output dist/bundle.min.js",
-    "build": "npm run rollup && npm run es5 && npm run minify"
+    "build": "npm run ngc && npm run rollup && npm run es5 && npm run minify"
   },
   "author": "GmanPark@2017",
   "license": "MIT",
