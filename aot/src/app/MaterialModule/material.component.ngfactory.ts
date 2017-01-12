@@ -13,6 +13,14 @@ import * as import4 from '@angular/core/src/metadata/view';
 import * as import5 from '@angular/core/src/linker/view_type';
 import * as import6 from '@angular/core/src/change_detection/constants';
 import * as import7 from '@angular/core/src/linker/component_factory';
+import * as import8 from './material.component.css.shim.ngstyle';
+import * as import9 from '@angular/material/sidenav/sidenav';
+import * as import10 from '../../../node_modules/@angular/material/sidenav/sidenav.ngfactory';
+import * as import11 from '@angular/core/src/linker/query_list';
+import * as import12 from '@angular/material/button/button';
+import * as import13 from '../../../node_modules/@angular/material/button/button.ngfactory';
+import * as import14 from '@angular/material/core/rtl/dir';
+import * as import15 from '@angular/core/src/linker/element_ref';
 export class Wrapper_MaterialComponent {
   /*private*/ _eventHandler:Function;
   context:import0.MaterialComponent;
@@ -72,18 +80,25 @@ class View_MaterialComponent_Host0 extends import1.AppView<any> {
   }
 }
 export const MaterialComponentNgFactory:import7.ComponentFactory<import0.MaterialComponent> = new import7.ComponentFactory<import0.MaterialComponent>('material',View_MaterialComponent_Host0,import0.MaterialComponent);
-const styles_MaterialComponent:any[] = ([] as any[]);
-var renderType_MaterialComponent:import2.RenderComponentType = import3.createRenderComponentType('',0,import4.ViewEncapsulation.None,styles_MaterialComponent,{});
+const styles_MaterialComponent:any[] = [import8.styles];
+var renderType_MaterialComponent:import2.RenderComponentType = import3.createRenderComponentType('',0,import4.ViewEncapsulation.Emulated,styles_MaterialComponent,{});
 export class View_MaterialComponent0 extends import1.AppView<import0.MaterialComponent> {
   _el_0:any;
+  compView_0:import1.AppView<import9.MdSidenavContainer>;
+  _MdSidenavContainer_0_3:import10.Wrapper_MdSidenavContainer;
+  _query_MdSidenav_0_0:import11.QueryList<any>;
   _text_1:any;
   _el_2:any;
+  compView_2:import1.AppView<import9.MdSidenav>;
+  _MdSidenav_2_3:import10.Wrapper_MdSidenav;
   _text_3:any;
-  _el_4:any;
-  _text_5:any;
+  _text_4:any;
+  _el_5:any;
   _text_6:any;
-  _text_7:any;
-  _el_8:any;
+  _el_7:any;
+  compView_7:import1.AppView<import12.MdButton>;
+  _MdButton_7_3:import13.Wrapper_MdButton;
+  _text_8:any;
   _text_9:any;
   _text_10:any;
   constructor(viewUtils:import3.ViewUtils,parentView:import1.AppView<any>,parentIndex:number,parentElement:any) {
@@ -91,31 +106,108 @@ export class View_MaterialComponent0 extends import1.AppView<import0.MaterialCom
   }
   createInternal(rootSelector:string):import7.ComponentRef<any> {
     const parentRenderNode:any = this.renderer.createViewRoot(this.parentElement);
-    this._el_0 = import3.createRenderElement(this.renderer,parentRenderNode,'md-sidenav-container',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_1 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_2 = import3.createRenderElement(this.renderer,this._el_0,'md-sidenav',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_3 = this.renderer.createText(this._el_2,'\n        ',(null as any));
-    this._el_4 = import3.createRenderElement(this.renderer,this._el_2,'h1',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_5 = this.renderer.createText(this._el_4,'sidebar',(null as any));
-    this._text_6 = this.renderer.createText(this._el_2,'\n    ',(null as any));
-    this._text_7 = this.renderer.createText(this._el_0,'\n\n    ',(null as any));
-    this._el_8 = import3.createRenderElement(this.renderer,this._el_0,'h2',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_9 = this.renderer.createText(this._el_8,'content',(null as any));
-    this._text_10 = this.renderer.createText(this._el_0,'\n',(null as any));
+    this._el_0 = import3.createRenderElement(this.renderer,parentRenderNode,'md-sidenav-container',new import3.InlineArray2(2,'class','example-container md-sidenav-container'),(null as any));
+    this.compView_0 = new import10.View_MdSidenavContainer0(this.viewUtils,this,0,this._el_0);
+    this._MdSidenavContainer_0_3 = new import10.Wrapper_MdSidenavContainer(this.parentView.injectorGet(import14.Dir,this.parentIndex,(null as any)),new import15.ElementRef(this._el_0),this.renderer);
+    this._query_MdSidenav_0_0 = new import11.QueryList<any>();
+    this._text_1 = this.renderer.createText((null as any),'\n    ',(null as any));
+    this._el_2 = import3.createRenderElement(this.renderer,(null as any),'md-sidenav',new import3.InlineArray8(6,'class','example-sidenav','mode','side','tabIndex','-1'),(null as any));
+    this.compView_2 = new import10.View_MdSidenav0(this.viewUtils,this,2,this._el_2);
+    this._MdSidenav_2_3 = new import10.Wrapper_MdSidenav(new import15.ElementRef(this._el_2),this.renderer);
+    this._text_3 = this.renderer.createText((null as any),'\n        Jolly good!\n    ',(null as any));
+    this.compView_2.create(this._MdSidenav_2_3.context);
+    this._text_4 = this.renderer.createText((null as any),'\n    ',(null as any));
+    this._el_5 = import3.createRenderElement(this.renderer,(null as any),'div',new import3.InlineArray2(2,'class','example-sidenav-content'),(null as any));
+    this._text_6 = this.renderer.createText(this._el_5,'\n        ',(null as any));
+    this._el_7 = import3.createRenderElement(this.renderer,this._el_5,'button',new import3.InlineArray2(2,'md-button',''),(null as any));
+    this.compView_7 = new import13.View_MdButton0(this.viewUtils,this,7,this._el_7);
+    this._MdButton_7_3 = new import13.Wrapper_MdButton(new import15.ElementRef(this._el_7),this.renderer);
+    this._text_8 = this.renderer.createText((null as any),'\n            Open sidenav\n        ',(null as any));
+    this.compView_7.create(this._MdButton_7_3.context);
+    this._text_9 = this.renderer.createText(this._el_5,'\n    ',(null as any));
+    this._text_10 = this.renderer.createText((null as any),'\n\n',(null as any));
+    this.compView_0.create(this._MdSidenavContainer_0_3.context);
+    var disposable_0:Function = import3.subscribeToRenderElement(this,this._el_2,new import3.InlineArray4(4,'transitionend',(null as any),'keydown',(null as any)),this.eventHandler(this.handleEvent_2));
+    var disposable_1:Function = import3.subscribeToRenderElement(this,this._el_7,new import3.InlineArray8(8,'click',(null as any),'mousedown',(null as any),'focus',(null as any),'blur',(null as any)),this.eventHandler(this.handleEvent_7));
     this.init((null as any),((<any>this.renderer).directRenderer? (null as any): [
       this._el_0,
       this._text_1,
       this._el_2,
       this._text_3,
-      this._el_4,
-      this._text_5,
+      this._text_4,
+      this._el_5,
       this._text_6,
-      this._text_7,
-      this._el_8,
+      this._el_7,
+      this._text_8,
       this._text_9,
       this._text_10
     ]
-    ),(null as any));
+    ),[
+      disposable_0,
+      disposable_1
+    ]
+    );
     return (null as any);
+  }
+  injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
+    if (((token === import9.MdSidenav) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 3)))) { return this._MdSidenav_2_3.context; }
+    if (((token === import12.MdButton) && ((7 <= requestNodeIndex) && (requestNodeIndex <= 8)))) { return this._MdButton_7_3.context; }
+    if (((token === import9.MdSidenavContainer) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 10)))) { return this._MdSidenavContainer_0_3.context; }
+    return notFoundResult;
+  }
+  detectChangesInternal(throwOnChange:boolean):void {
+    this._MdSidenavContainer_0_3.ngDoCheck(this,this._el_0,throwOnChange);
+    const currVal_2_0_0:any = 'side';
+    this._MdSidenav_2_3.check_mode(currVal_2_0_0,throwOnChange,false);
+    if (this._MdSidenav_2_3.ngDoCheck(this,this._el_2,throwOnChange)) { this.compView_2.markAsCheckOnce(); }
+    if (this._MdButton_7_3.ngDoCheck(this,this._el_7,throwOnChange)) { this.compView_7.markAsCheckOnce(); }
+    if (!throwOnChange) {
+      if (this._query_MdSidenav_0_0.dirty) {
+        this._query_MdSidenav_0_0.reset([this._MdSidenav_2_3.context]);
+        this._MdSidenavContainer_0_3.context._sidenavs = this._query_MdSidenav_0_0;
+        this._query_MdSidenav_0_0.notifyOnChanges();
+      }
+      if ((this.numberOfChecks === 0)) { this._MdSidenav_2_3.context.ngAfterContentInit(); }
+      if ((this.numberOfChecks === 0)) { this._MdSidenavContainer_0_3.context.ngAfterContentInit(); }
+    }
+    this._MdSidenav_2_3.checkHost(this,this.compView_2,this._el_2,throwOnChange);
+    this._MdButton_7_3.checkHost(this,this.compView_7,this._el_7,throwOnChange);
+    this.compView_0.internalDetectChanges(throwOnChange);
+    this.compView_2.internalDetectChanges(throwOnChange);
+    this.compView_7.internalDetectChanges(throwOnChange);
+  }
+  destroyInternal():void {
+    this.compView_0.destroy();
+    this.compView_2.destroy();
+    this.compView_7.destroy();
+    this._MdSidenav_2_3.ngOnDestroy();
+    this._MdSidenavContainer_0_3.ngOnDestroy();
+  }
+  visitProjectableNodesInternal(nodeIndex:number,ngContentIndex:number,cb:any,ctx:any):void {
+    if (((nodeIndex == 0) && (ngContentIndex == 0))) { cb(this._el_2,ctx); }
+    if (((nodeIndex == 0) && (ngContentIndex == 1))) {
+      cb(this._text_1,ctx);
+      cb(this._text_4,ctx);
+      cb(this._el_5,ctx);
+      cb(this._text_10,ctx);
+    }
+    if (((nodeIndex == 2) && (ngContentIndex == 0))) { cb(this._text_3,ctx); }
+    if (((nodeIndex == 7) && (ngContentIndex == 0))) { cb(this._text_8,ctx); }
+  }
+  handleEvent_2(eventName:string,$event:any):boolean {
+    this.compView_2.markPathToRootAsCheckOnce();
+    var result:boolean = true;
+    result = (this._MdSidenav_2_3.handleEvent(eventName,$event) && result);
+    return result;
+  }
+  handleEvent_7(eventName:string,$event:any):boolean {
+    this.compView_7.markPathToRootAsCheckOnce();
+    var result:boolean = true;
+    result = (this._MdButton_7_3.handleEvent(eventName,$event) && result);
+    if ((eventName == 'click')) {
+      const pd_sub_0:any = ((<any>this._MdSidenav_2_3.context.open()) !== false);
+      result = (pd_sub_0 && result);
+    }
+    return result;
   }
 }

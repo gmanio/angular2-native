@@ -9,53 +9,363 @@ import * as import0 from '@angular/core/src/linker/ng_module_factory';
 import * as import1 from '../../../../src/app/MaterialModule/material.module';
 import * as import2 from '@angular/common/src/common_module';
 import * as import3 from '@angular/router/src/router_module';
-import * as import4 from '@angular/common/src/localization';
-import * as import5 from '@angular/platform-browser/src/browser/title';
-import * as import6 from '@angular/core/src/di/injector';
-import * as import7 from './material.component.ngfactory';
-import * as import8 from '@angular/core/src/i18n/tokens';
-import * as import9 from '../../../../src/app/MaterialModule/material.component';
-import * as import10 from '@angular/router/src/router_config_loader';
+import * as import4 from '@angular/material/core/compatibility/default-mode';
+import * as import5 from '@angular/material/core/ripple/ripple';
+import * as import6 from '@angular/material/button/button';
+import * as import7 from '@angular/material/card/card';
+import * as import8 from '@angular/material/chips/chip-list';
+import * as import9 from '@angular/material/checkbox/checkbox';
+import * as import10 from '@angular/material/core/line/line';
+import * as import11 from '@angular/material/grid-list/grid-list';
+import * as import12 from '@angular/forms/src/directives';
+import * as import13 from '@angular/forms/src/form_providers';
+import * as import14 from '@angular/material/core/platform/index';
+import * as import15 from '@angular/material/input/input';
+import * as import16 from '@angular/material/list/list';
+import * as import17 from '@angular/material/progress-bar/progress-bar';
+import * as import18 from '@angular/material/progress-spinner/progress-spinner';
+import * as import19 from '@angular/material/core/portal/portal-directives';
+import * as import20 from '@angular/material/core/overlay/overlay-directives';
+import * as import21 from '@angular/material/select/index';
+import * as import22 from '@angular/material/core/a11y/index';
+import * as import23 from '@angular/material/sidenav/sidenav';
+import * as import24 from '@angular/material/core/observe-content/observe-content';
+import * as import25 from '@angular/material/tabs/tab-group';
+import * as import26 from '@angular/material/toolbar/toolbar';
+import * as import27 from '@angular/material/core/projection/projection';
+import * as import28 from '@angular/material/core/rtl/dir';
+import * as import29 from '@angular/material/button-toggle/button-toggle';
+import * as import30 from '@angular/material/dialog/index';
+import * as import31 from '@angular/http/src/http_module';
+import * as import32 from '@angular/material/icon/icon';
+import * as import33 from '@angular/material/menu/menu';
+import * as import34 from '@angular/material/radio/radio';
+import * as import35 from '@angular/material/slider/slider';
+import * as import36 from '@angular/material/slide-toggle/slide-toggle';
+import * as import37 from '@angular/material/snack-bar/snack-bar';
+import * as import38 from '@angular/material/tooltip/tooltip';
+import * as import39 from '@angular/material/module';
+import * as import40 from '@angular/common/src/localization';
+import * as import41 from '@angular/forms/src/directives/radio_control_value_accessor';
+import * as import42 from '@angular/http/src/backends/browser_xhr';
+import * as import43 from '@angular/http/src/base_response_options';
+import * as import44 from '@angular/http/src/backends/xhr_backend';
+import * as import45 from '@angular/http/src/base_request_options';
+import * as import46 from '@angular/material/core/gestures/gesture-config';
+import * as import47 from '@angular/material/core/overlay/position/viewport-ruler';
+import * as import48 from '@angular/material/core/platform/platform';
+import * as import49 from '@angular/material/core/overlay/position/overlay-position-builder';
+import * as import50 from '@angular/material/core/overlay/overlay-container';
+import * as import51 from '@angular/material/core/overlay/overlay';
+import * as import52 from '@angular/material/core/overlay/scroll/scroll-dispatcher';
+import * as import53 from '@angular/material/core/a11y/interactivity-checker';
+import * as import54 from '@angular/material/core/a11y/live-announcer';
+import * as import55 from '@angular/material/core/coordination/unique-selection-dispatcher';
+import * as import56 from '@angular/material/dialog/dialog';
+import * as import57 from '@angular/material/icon/icon-registry';
+import * as import58 from '@angular/platform-browser/src/browser/title';
+import * as import59 from '@angular/core/src/di/injector';
+import * as import60 from '../../../node_modules/@angular/material/dialog/dialog-container.ngfactory';
+import * as import61 from '../../../node_modules/@angular/material/snack-bar/snack-bar-container.ngfactory';
+import * as import62 from '../../../node_modules/@angular/material/snack-bar/simple-snack-bar.ngfactory';
+import * as import63 from '../../../node_modules/@angular/material/tooltip/tooltip.ngfactory';
+import * as import64 from './material.component.ngfactory';
+import * as import65 from '@angular/core/src/i18n/tokens';
+import * as import66 from '@angular/core/src/application_ref';
+import * as import67 from '@angular/core/src/zone/ng_zone';
+import * as import68 from '@angular/platform-browser/src/security/dom_sanitization_service';
+import * as import69 from '../../../../src/app/MaterialModule/material.component';
+import * as import70 from '@angular/http/src/interfaces';
+import * as import71 from '@angular/http/src/http';
+import * as import72 from '@angular/platform-browser/src/dom/events/hammer_gestures';
+import * as import73 from '@angular/router/src/router_config_loader';
 class MaterialComponentModuleInjector extends import0.NgModuleInjector<import1.MaterialComponentModule> {
   _CommonModule_0:import2.CommonModule;
   _RouterModule_1:import3.RouterModule;
-  _MaterialComponentModule_2:import1.MaterialComponentModule;
-  __NgLocalization_3:import4.NgLocaleLocalization;
-  __ROUTES_4:any[];
-  __Title_5:import5.Title;
-  constructor(parent:import6.Injector) {
-    super(parent,[import7.MaterialComponentNgFactory],([] as any[]));
+  _DefaultStyleCompatibilityModeModule_2:import4.DefaultStyleCompatibilityModeModule;
+  _MdRippleModule_3:import5.MdRippleModule;
+  _MdButtonModule_4:import6.MdButtonModule;
+  _MdCardModule_5:import7.MdCardModule;
+  _MdChipsModule_6:import8.MdChipsModule;
+  _MdCheckboxModule_7:import9.MdCheckboxModule;
+  _MdLineModule_8:import10.MdLineModule;
+  _MdGridListModule_9:import11.MdGridListModule;
+  _InternalFormsSharedModule_10:import12.InternalFormsSharedModule;
+  _FormsModule_11:import13.FormsModule;
+  _PlatformModule_12:import14.PlatformModule;
+  _MdInputModule_13:import15.MdInputModule;
+  _MdListModule_14:import16.MdListModule;
+  _MdProgressBarModule_15:import17.MdProgressBarModule;
+  _MdProgressSpinnerModule_16:import18.MdProgressSpinnerModule;
+  _PortalModule_17:import19.PortalModule;
+  _OverlayModule_18:import20.OverlayModule;
+  _MdSelectModule_19:import21.MdSelectModule;
+  _A11yModule_20:import22.A11yModule;
+  _MdSidenavModule_21:import23.MdSidenavModule;
+  _ObserveContentModule_22:import24.ObserveContentModule;
+  _MdTabsModule_23:import25.MdTabsModule;
+  _MdToolbarModule_24:import26.MdToolbarModule;
+  _ProjectionModule_25:import27.ProjectionModule;
+  _RtlModule_26:import28.RtlModule;
+  _MdButtonToggleModule_27:import29.MdButtonToggleModule;
+  _MdDialogModule_28:import30.MdDialogModule;
+  _HttpModule_29:import31.HttpModule;
+  _MdIconModule_30:import32.MdIconModule;
+  _MdMenuModule_31:import33.MdMenuModule;
+  _MdRadioModule_32:import34.MdRadioModule;
+  _MdSliderModule_33:import35.MdSliderModule;
+  _MdSlideToggleModule_34:import36.MdSlideToggleModule;
+  _MdSnackBarModule_35:import37.MdSnackBarModule;
+  _MdTooltipModule_36:import38.MdTooltipModule;
+  _MaterialRootModule_37:import39.MaterialRootModule;
+  _MaterialComponentModule_38:import1.MaterialComponentModule;
+  __NgLocalization_39:import40.NgLocaleLocalization;
+  __MATERIAL_COMPATIBILITY_MODE_40:any;
+  __RadioControlRegistry_41:import41.RadioControlRegistry;
+  __BrowserXhr_42:import42.BrowserXhr;
+  __ResponseOptions_43:import43.BaseResponseOptions;
+  __XSRFStrategy_44:any;
+  __XHRBackend_45:import44.XHRBackend;
+  __RequestOptions_46:import45.BaseRequestOptions;
+  __Http_47:any;
+  __HAMMER_GESTURE_CONFIG_48:import46.GestureConfig;
+  __ViewportRuler_49:import47.ViewportRuler;
+  __Platform_50:import48.Platform;
+  __OverlayPositionBuilder_51:import49.OverlayPositionBuilder;
+  __OverlayContainer_52:import50.OverlayContainer;
+  __Overlay_53:import51.Overlay;
+  __ScrollDispatcher_54:import52.ScrollDispatcher;
+  __InteractivityChecker_55:import53.InteractivityChecker;
+  __DomProjection_56:import27.DomProjection;
+  __LiveAnnouncer_57:import54.LiveAnnouncer;
+  __UniqueSelectionDispatcher_58:import55.UniqueSelectionDispatcher;
+  __MdDialog_59:import56.MdDialog;
+  __MdIconRegistry_60:import57.MdIconRegistry;
+  __MdSnackBar_61:import37.MdSnackBar;
+  __ROUTES_62:any[];
+  __Title_63:import58.Title;
+  constructor(parent:import59.Injector) {
+    super(parent,[
+      import60.MdDialogContainerNgFactory,
+      import61.MdSnackBarContainerNgFactory,
+      import62.SimpleSnackBarNgFactory,
+      import63.TooltipComponentNgFactory,
+      import64.MaterialComponentNgFactory
+    ]
+    ,([] as any[]));
   }
-  get _NgLocalization_3():import4.NgLocaleLocalization {
-    if ((this.__NgLocalization_3 == null)) { (this.__NgLocalization_3 = new import4.NgLocaleLocalization(this.parent.get(import8.LOCALE_ID))); }
-    return this.__NgLocalization_3;
+  get _NgLocalization_39():import40.NgLocaleLocalization {
+    if ((this.__NgLocalization_39 == null)) { (this.__NgLocalization_39 = new import40.NgLocaleLocalization(this.parent.get(import65.LOCALE_ID))); }
+    return this.__NgLocalization_39;
   }
-  get _ROUTES_4():any[] {
-        if ((this.__ROUTES_4 == null)) { (this.__ROUTES_4 = [[{
+  get _MATERIAL_COMPATIBILITY_MODE_40():any {
+    if ((this.__MATERIAL_COMPATIBILITY_MODE_40 == null)) { (this.__MATERIAL_COMPATIBILITY_MODE_40 = false); }
+    return this.__MATERIAL_COMPATIBILITY_MODE_40;
+  }
+  get _RadioControlRegistry_41():import41.RadioControlRegistry {
+    if ((this.__RadioControlRegistry_41 == null)) { (this.__RadioControlRegistry_41 = new import41.RadioControlRegistry()); }
+    return this.__RadioControlRegistry_41;
+  }
+  get _BrowserXhr_42():import42.BrowserXhr {
+    if ((this.__BrowserXhr_42 == null)) { (this.__BrowserXhr_42 = new import42.BrowserXhr()); }
+    return this.__BrowserXhr_42;
+  }
+  get _ResponseOptions_43():import43.BaseResponseOptions {
+    if ((this.__ResponseOptions_43 == null)) { (this.__ResponseOptions_43 = new import43.BaseResponseOptions()); }
+    return this.__ResponseOptions_43;
+  }
+  get _XSRFStrategy_44():any {
+    if ((this.__XSRFStrategy_44 == null)) { (this.__XSRFStrategy_44 = import31._createDefaultCookieXSRFStrategy()); }
+    return this.__XSRFStrategy_44;
+  }
+  get _XHRBackend_45():import44.XHRBackend {
+    if ((this.__XHRBackend_45 == null)) { (this.__XHRBackend_45 = new import44.XHRBackend(this._BrowserXhr_42,this._ResponseOptions_43,this._XSRFStrategy_44)); }
+    return this.__XHRBackend_45;
+  }
+  get _RequestOptions_46():import45.BaseRequestOptions {
+    if ((this.__RequestOptions_46 == null)) { (this.__RequestOptions_46 = new import45.BaseRequestOptions()); }
+    return this.__RequestOptions_46;
+  }
+  get _Http_47():any {
+    if ((this.__Http_47 == null)) { (this.__Http_47 = import31.httpFactory(this._XHRBackend_45,this._RequestOptions_46)); }
+    return this.__Http_47;
+  }
+  get _HAMMER_GESTURE_CONFIG_48():import46.GestureConfig {
+    if ((this.__HAMMER_GESTURE_CONFIG_48 == null)) { (this.__HAMMER_GESTURE_CONFIG_48 = new import46.GestureConfig()); }
+    return this.__HAMMER_GESTURE_CONFIG_48;
+  }
+  get _ViewportRuler_49():import47.ViewportRuler {
+    if ((this.__ViewportRuler_49 == null)) { (this.__ViewportRuler_49 = new import47.ViewportRuler()); }
+    return this.__ViewportRuler_49;
+  }
+  get _Platform_50():import48.Platform {
+    if ((this.__Platform_50 == null)) { (this.__Platform_50 = new import48.Platform()); }
+    return this.__Platform_50;
+  }
+  get _OverlayPositionBuilder_51():import49.OverlayPositionBuilder {
+    if ((this.__OverlayPositionBuilder_51 == null)) { (this.__OverlayPositionBuilder_51 = new import49.OverlayPositionBuilder(this._ViewportRuler_49)); }
+    return this.__OverlayPositionBuilder_51;
+  }
+  get _OverlayContainer_52():import50.OverlayContainer {
+    if ((this.__OverlayContainer_52 == null)) { (this.__OverlayContainer_52 = new import50.OverlayContainer()); }
+    return this.__OverlayContainer_52;
+  }
+  get _Overlay_53():import51.Overlay {
+    if ((this.__Overlay_53 == null)) { (this.__Overlay_53 = new import51.Overlay(this._OverlayContainer_52,this,this._OverlayPositionBuilder_51,this.parent.get(import66.ApplicationRef),this,this.parent.get(import67.NgZone))); }
+    return this.__Overlay_53;
+  }
+  get _ScrollDispatcher_54():import52.ScrollDispatcher {
+    if ((this.__ScrollDispatcher_54 == null)) { (this.__ScrollDispatcher_54 = new import52.ScrollDispatcher()); }
+    return this.__ScrollDispatcher_54;
+  }
+  get _InteractivityChecker_55():import53.InteractivityChecker {
+    if ((this.__InteractivityChecker_55 == null)) { (this.__InteractivityChecker_55 = new import53.InteractivityChecker(this._Platform_50)); }
+    return this.__InteractivityChecker_55;
+  }
+  get _DomProjection_56():import27.DomProjection {
+    if ((this.__DomProjection_56 == null)) { (this.__DomProjection_56 = new import27.DomProjection()); }
+    return this.__DomProjection_56;
+  }
+  get _LiveAnnouncer_57():import54.LiveAnnouncer {
+    if ((this.__LiveAnnouncer_57 == null)) { (this.__LiveAnnouncer_57 = new import54.LiveAnnouncer(this.parent.get(import54.LIVE_ANNOUNCER_ELEMENT_TOKEN,(null as any)))); }
+    return this.__LiveAnnouncer_57;
+  }
+  get _UniqueSelectionDispatcher_58():import55.UniqueSelectionDispatcher {
+    if ((this.__UniqueSelectionDispatcher_58 == null)) { (this.__UniqueSelectionDispatcher_58 = new import55.UniqueSelectionDispatcher()); }
+    return this.__UniqueSelectionDispatcher_58;
+  }
+  get _MdDialog_59():import56.MdDialog {
+    if ((this.__MdDialog_59 == null)) { (this.__MdDialog_59 = new import56.MdDialog(this._Overlay_53,this)); }
+    return this.__MdDialog_59;
+  }
+  get _MdIconRegistry_60():import57.MdIconRegistry {
+    if ((this.__MdIconRegistry_60 == null)) { (this.__MdIconRegistry_60 = new import57.MdIconRegistry(this._Http_47,this.parent.get(import68.DomSanitizer))); }
+    return this.__MdIconRegistry_60;
+  }
+  get _MdSnackBar_61():import37.MdSnackBar {
+    if ((this.__MdSnackBar_61 == null)) { (this.__MdSnackBar_61 = new import37.MdSnackBar(this._Overlay_53,this._LiveAnnouncer_57)); }
+    return this.__MdSnackBar_61;
+  }
+  get _ROUTES_62():any[] {
+        if ((this.__ROUTES_62 == null)) { (this.__ROUTES_62 = [[{
           path: 'material',
-          component: import9.MaterialComponent,
+          component: import69.MaterialComponent,
           data: {title: 'ChildComponent'}
         }
     ]]); }
-    return this.__ROUTES_4;
+    return this.__ROUTES_62;
   }
-  get _Title_5():import5.Title {
-    if ((this.__Title_5 == null)) { (this.__Title_5 = new import5.Title()); }
-    return this.__Title_5;
+  get _Title_63():import58.Title {
+    if ((this.__Title_63 == null)) { (this.__Title_63 = new import58.Title()); }
+    return this.__Title_63;
   }
   createInternal():import1.MaterialComponentModule {
     this._CommonModule_0 = new import2.CommonModule();
     this._RouterModule_1 = new import3.RouterModule(this.parent.get(import3.ROUTER_FORROOT_GUARD,(null as any)));
-    this._MaterialComponentModule_2 = new import1.MaterialComponentModule();
-    return this._MaterialComponentModule_2;
+    this._DefaultStyleCompatibilityModeModule_2 = new import4.DefaultStyleCompatibilityModeModule();
+    this._MdRippleModule_3 = new import5.MdRippleModule();
+    this._MdButtonModule_4 = new import6.MdButtonModule();
+    this._MdCardModule_5 = new import7.MdCardModule();
+    this._MdChipsModule_6 = new import8.MdChipsModule();
+    this._MdCheckboxModule_7 = new import9.MdCheckboxModule();
+    this._MdLineModule_8 = new import10.MdLineModule();
+    this._MdGridListModule_9 = new import11.MdGridListModule();
+    this._InternalFormsSharedModule_10 = new import12.InternalFormsSharedModule();
+    this._FormsModule_11 = new import13.FormsModule();
+    this._PlatformModule_12 = new import14.PlatformModule();
+    this._MdInputModule_13 = new import15.MdInputModule();
+    this._MdListModule_14 = new import16.MdListModule();
+    this._MdProgressBarModule_15 = new import17.MdProgressBarModule();
+    this._MdProgressSpinnerModule_16 = new import18.MdProgressSpinnerModule();
+    this._PortalModule_17 = new import19.PortalModule();
+    this._OverlayModule_18 = new import20.OverlayModule();
+    this._MdSelectModule_19 = new import21.MdSelectModule();
+    this._A11yModule_20 = new import22.A11yModule();
+    this._MdSidenavModule_21 = new import23.MdSidenavModule();
+    this._ObserveContentModule_22 = new import24.ObserveContentModule();
+    this._MdTabsModule_23 = new import25.MdTabsModule();
+    this._MdToolbarModule_24 = new import26.MdToolbarModule();
+    this._ProjectionModule_25 = new import27.ProjectionModule();
+    this._RtlModule_26 = new import28.RtlModule();
+    this._MdButtonToggleModule_27 = new import29.MdButtonToggleModule();
+    this._MdDialogModule_28 = new import30.MdDialogModule();
+    this._HttpModule_29 = new import31.HttpModule();
+    this._MdIconModule_30 = new import32.MdIconModule();
+    this._MdMenuModule_31 = new import33.MdMenuModule();
+    this._MdRadioModule_32 = new import34.MdRadioModule();
+    this._MdSliderModule_33 = new import35.MdSliderModule();
+    this._MdSlideToggleModule_34 = new import36.MdSlideToggleModule();
+    this._MdSnackBarModule_35 = new import37.MdSnackBarModule();
+    this._MdTooltipModule_36 = new import38.MdTooltipModule();
+    this._MaterialRootModule_37 = new import39.MaterialRootModule();
+    this._MaterialComponentModule_38 = new import1.MaterialComponentModule();
+    return this._MaterialComponentModule_38;
   }
   getInternal(token:any,notFoundResult:any):any {
     if ((token === import2.CommonModule)) { return this._CommonModule_0; }
     if ((token === import3.RouterModule)) { return this._RouterModule_1; }
-    if ((token === import1.MaterialComponentModule)) { return this._MaterialComponentModule_2; }
-    if ((token === import4.NgLocalization)) { return this._NgLocalization_3; }
-    if ((token === import10.ROUTES)) { return this._ROUTES_4; }
-    if ((token === import5.Title)) { return this._Title_5; }
+    if ((token === import4.DefaultStyleCompatibilityModeModule)) { return this._DefaultStyleCompatibilityModeModule_2; }
+    if ((token === import5.MdRippleModule)) { return this._MdRippleModule_3; }
+    if ((token === import6.MdButtonModule)) { return this._MdButtonModule_4; }
+    if ((token === import7.MdCardModule)) { return this._MdCardModule_5; }
+    if ((token === import8.MdChipsModule)) { return this._MdChipsModule_6; }
+    if ((token === import9.MdCheckboxModule)) { return this._MdCheckboxModule_7; }
+    if ((token === import10.MdLineModule)) { return this._MdLineModule_8; }
+    if ((token === import11.MdGridListModule)) { return this._MdGridListModule_9; }
+    if ((token === import12.InternalFormsSharedModule)) { return this._InternalFormsSharedModule_10; }
+    if ((token === import13.FormsModule)) { return this._FormsModule_11; }
+    if ((token === import14.PlatformModule)) { return this._PlatformModule_12; }
+    if ((token === import15.MdInputModule)) { return this._MdInputModule_13; }
+    if ((token === import16.MdListModule)) { return this._MdListModule_14; }
+    if ((token === import17.MdProgressBarModule)) { return this._MdProgressBarModule_15; }
+    if ((token === import18.MdProgressSpinnerModule)) { return this._MdProgressSpinnerModule_16; }
+    if ((token === import19.PortalModule)) { return this._PortalModule_17; }
+    if ((token === import20.OverlayModule)) { return this._OverlayModule_18; }
+    if ((token === import21.MdSelectModule)) { return this._MdSelectModule_19; }
+    if ((token === import22.A11yModule)) { return this._A11yModule_20; }
+    if ((token === import23.MdSidenavModule)) { return this._MdSidenavModule_21; }
+    if ((token === import24.ObserveContentModule)) { return this._ObserveContentModule_22; }
+    if ((token === import25.MdTabsModule)) { return this._MdTabsModule_23; }
+    if ((token === import26.MdToolbarModule)) { return this._MdToolbarModule_24; }
+    if ((token === import27.ProjectionModule)) { return this._ProjectionModule_25; }
+    if ((token === import28.RtlModule)) { return this._RtlModule_26; }
+    if ((token === import29.MdButtonToggleModule)) { return this._MdButtonToggleModule_27; }
+    if ((token === import30.MdDialogModule)) { return this._MdDialogModule_28; }
+    if ((token === import31.HttpModule)) { return this._HttpModule_29; }
+    if ((token === import32.MdIconModule)) { return this._MdIconModule_30; }
+    if ((token === import33.MdMenuModule)) { return this._MdMenuModule_31; }
+    if ((token === import34.MdRadioModule)) { return this._MdRadioModule_32; }
+    if ((token === import35.MdSliderModule)) { return this._MdSliderModule_33; }
+    if ((token === import36.MdSlideToggleModule)) { return this._MdSlideToggleModule_34; }
+    if ((token === import37.MdSnackBarModule)) { return this._MdSnackBarModule_35; }
+    if ((token === import38.MdTooltipModule)) { return this._MdTooltipModule_36; }
+    if ((token === import39.MaterialRootModule)) { return this._MaterialRootModule_37; }
+    if ((token === import1.MaterialComponentModule)) { return this._MaterialComponentModule_38; }
+    if ((token === import40.NgLocalization)) { return this._NgLocalization_39; }
+    if ((token === import4.MATERIAL_COMPATIBILITY_MODE)) { return this._MATERIAL_COMPATIBILITY_MODE_40; }
+    if ((token === import41.RadioControlRegistry)) { return this._RadioControlRegistry_41; }
+    if ((token === import42.BrowserXhr)) { return this._BrowserXhr_42; }
+    if ((token === import43.ResponseOptions)) { return this._ResponseOptions_43; }
+    if ((token === import70.XSRFStrategy)) { return this._XSRFStrategy_44; }
+    if ((token === import44.XHRBackend)) { return this._XHRBackend_45; }
+    if ((token === import45.RequestOptions)) { return this._RequestOptions_46; }
+    if ((token === import71.Http)) { return this._Http_47; }
+    if ((token === import72.HAMMER_GESTURE_CONFIG)) { return this._HAMMER_GESTURE_CONFIG_48; }
+    if ((token === import47.ViewportRuler)) { return this._ViewportRuler_49; }
+    if ((token === import48.Platform)) { return this._Platform_50; }
+    if ((token === import49.OverlayPositionBuilder)) { return this._OverlayPositionBuilder_51; }
+    if ((token === import50.OverlayContainer)) { return this._OverlayContainer_52; }
+    if ((token === import51.Overlay)) { return this._Overlay_53; }
+    if ((token === import52.ScrollDispatcher)) { return this._ScrollDispatcher_54; }
+    if ((token === import53.InteractivityChecker)) { return this._InteractivityChecker_55; }
+    if ((token === import27.DomProjection)) { return this._DomProjection_56; }
+    if ((token === import54.LiveAnnouncer)) { return this._LiveAnnouncer_57; }
+    if ((token === import55.UniqueSelectionDispatcher)) { return this._UniqueSelectionDispatcher_58; }
+    if ((token === import56.MdDialog)) { return this._MdDialog_59; }
+    if ((token === import57.MdIconRegistry)) { return this._MdIconRegistry_60; }
+    if ((token === import37.MdSnackBar)) { return this._MdSnackBar_61; }
+    if ((token === import73.ROUTES)) { return this._ROUTES_62; }
+    if ((token === import58.Title)) { return this._Title_63; }
     return notFoundResult;
   }
   destroyInternal():void {
