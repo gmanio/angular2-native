@@ -13,6 +13,15 @@ import {Component} from '@angular/core';
 })
 
 export class MaterialComponent {
+
     constructor() {
+    }
+
+    onClickSideNav(sidenav) {
+        if(sidenav.opened){
+            sidenav.close();
+        }else{
+            sidenav.open()
+        }
     }
 }

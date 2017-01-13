@@ -5,6 +5,7 @@
 
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {CommonModule}   from '@angular/common';
+import {RouterModule} from "@angular/router";
 
 // basic routing
 import {MaterialModule} from '@angular/material';
@@ -20,13 +21,16 @@ import {Title} from "@angular/platform-browser";
         routingModule,
         MaterialModule.forRoot()
     ],
+    exports: [
+        RouterModule
+    ],
     declarations: [
         MaterialComponent
     ],
     providers: [
         Title
     ],
-    schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class MaterialComponentModule {

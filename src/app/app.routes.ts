@@ -13,16 +13,8 @@ import {ChildModule2} from "./childModule2/child.module";
 import {MaterialComponentModule} from "./MaterialModule/material.module";
 
 export const routingModule = RouterModule.forRoot([
+    // first url is for loading "material module".
     {path: '', redirectTo: 'material', pathMatch: 'full'},
-    {
-        path: 'child', component: ChildModule, data: {title: 'Heroes List'}
-    },
-    {
-        path: 'child2', component: ChildModule2, data: {title: 'Heroes List'}
-    },
-    {
-        path: 'material', component: MaterialComponentModule, data: {title: 'Heroes List'}
-    },
     {
         path: "**",
         component: PageNotFoundComponent

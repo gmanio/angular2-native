@@ -20,10 +20,12 @@ module.exports = {
             /**
              * Only for develop environment.
              */
-            2: require('connect-history-api-fallback')({
-                index: './index.dev.html',
-                verbose: true
-            })
+            2: function(){
+                return require('connect-history-api-fallback')({
+                    index: './index.dev.html',
+                    verbose: true
+                })
+            }()
         }
     }
 };
